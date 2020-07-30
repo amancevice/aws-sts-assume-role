@@ -1,4 +1,4 @@
-name: Assume IAM Role
+name: AWS STS Assume Role
 description: Assumes AWS IAM role and exports credentials to ENV
 author: small weird number
 inputs:
