@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "aws-sdk": "^2.723.0"
+  },
+  "description": "Assume AWS IAM role and export credentials",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "assume-role",
+  "repository": "https://github.com/amancevice/assume-role",
+  "version": "0.1.0"
+}

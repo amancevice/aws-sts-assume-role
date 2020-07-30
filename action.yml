@@ -1,0 +1,27 @@
+name: Assume IAM Role
+description: Assumes AWS IAM role and exports credentials to ENV
+author: small weird number
+inputs:
+  access_key_id:
+    description: AWS access key ID
+    required: true
+  secret_access_key:
+    description: AWS secret access key
+    required: true
+  duration_seconds:
+    description: The duration, in seconds, of the role session
+    default: 3600
+    required: false
+  role_arn:
+    description: The Amazon Resource Name (ARN) of the role to assume
+    required: true
+  role_session_name:
+    description: An identifier for the assumed role session
+    default: GitHub-Action
+    required: false
+runs:
+  using: node12
+  main: index.js
+branding:
+  icon: users
+  color: orange
