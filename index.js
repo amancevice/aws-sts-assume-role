@@ -4,11 +4,11 @@ const { STS } = require('aws-sdk');
 const assumeRole = async () => {
   try {
     // Gather GitHub Actions inputs
-    const access_key_id     = core.getInput('access_key_id');
-    const secret_access_key = core.getInput('secret_access_key');
-    const duration_seconds  = core.getInput('duration_seconds');
-    const role_arn          = core.getInput('role_arn');
-    const role_session_name = core.getInput('role_session_name');
+    const access_key_id     = core.getInput('access-key-id');
+    const secret_access_key = core.getInput('secret-access-key');
+    const duration_seconds  = core.getInput('duration-seconds');
+    const role_arn          = core.getInput('role-arn');
+    const role_session_name = core.getInput('role-session-name');
 
     // Create STS client
     const sts = new STS({

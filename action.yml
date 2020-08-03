@@ -2,20 +2,20 @@ name: AWS STS Assume Role
 description: Assumes AWS IAM role and exports credentials to ENV
 author: small weird number
 inputs:
-  access_key_id:
+  access-key-id:
     description: AWS access key ID
     required: true
-  secret_access_key:
+  secret-access-key:
     description: AWS secret access key
     required: true
-  duration_seconds:
+  duration-seconds:
     description: The duration, in seconds, of the role session
     default: 3600
     required: false
-  role_arn:
+  role-arn:
     description: The Amazon Resource Name (ARN) of the role to assume
     required: true
-  role_session_name:
+  role-session-name:
     description: An identifier for the assumed role session
     default: GitHub-Action
     required: false
