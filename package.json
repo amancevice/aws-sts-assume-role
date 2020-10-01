@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.2.6",
     "aws-sdk": "^2.723.0"
   },
   "description": "Assume AWS IAM role and export credentials",
