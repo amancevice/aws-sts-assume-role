@@ -24,6 +24,9 @@ const assumeRole = async () => {
     }).promise()
 
     // Export ENV
+    core.setSecret(res.Credentials.AccessKeyId);
+    core.setSecret(res.Credentials.SecretAccessKey);
+    core.setSecret(res.Credentials.SessionToken);
     core.exportVariable('AWS_ACCESS_KEY_ID',     res.Credentials.AccessKeyId);
     core.exportVariable('AWS_SECRET_ACCESS_KEY', res.Credentials.SecretAccessKey);
     core.exportVariable('AWS_SESSION_TOKEN',     res.Credentials.SessionToken);
