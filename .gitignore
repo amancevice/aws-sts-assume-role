@@ -1,5 +1,4 @@
 .nyc_output/
-bin/
 coverage/
 node_modules/*
 !node_modules/.bin
@@ -14,6 +13,7 @@ node_modules/*
 !node_modules/punycode
 !node_modules/querystring
 !node_modules/sax
+!node_modules/tunnel
 !node_modules/url
 !node_modules/uuid
 !node_modules/xml2js

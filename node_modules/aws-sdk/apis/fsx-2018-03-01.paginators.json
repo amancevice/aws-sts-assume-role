@@ -5,7 +5,17 @@
       "output_token": "NextToken",
       "limit_key": "MaxResults"
     },
+    "DescribeDataRepositoryAssociations": {
+      "input_token": "NextToken",
+      "output_token": "NextToken",
+      "limit_key": "MaxResults"
+    },
     "DescribeDataRepositoryTasks": {
+      "input_token": "NextToken",
+      "output_token": "NextToken",
+      "limit_key": "MaxResults"
+    },
+    "DescribeFileCaches": {
       "input_token": "NextToken",
       "output_token": "NextToken",
       "limit_key": "MaxResults"
@@ -20,15 +30,22 @@
       "output_token": "NextToken",
       "limit_key": "MaxResults"
     },
-    "DescribeStorageVirtualMachines": {
+    "DescribeSnapshots": {
       "input_token": "NextToken",
       "output_token": "NextToken",
       "limit_key": "MaxResults"
     },
+    "DescribeStorageVirtualMachines": {
+      "input_token": "NextToken",
+      "output_token": "NextToken",
+      "limit_key": "MaxResults",
+      "result_key": "StorageVirtualMachines"
+    },
     "DescribeVolumes": {
       "input_token": "NextToken",
       "output_token": "NextToken",
-      "limit_key": "MaxResults"
+      "limit_key": "MaxResults",
+      "result_key": "Volumes"
     },
     "ListTagsForResource": {
       "input_token": "NextToken",
