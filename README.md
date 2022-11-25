@@ -3,7 +3,7 @@
 Assume an AWS IAM role and export the credentials to your GitHub Action ENV.
 
 ```yaml
-- uses: amancevice/aws-sts-assume-role@v0
+- uses: amancevice/aws-sts-assume-role@v1
   with:
 
     # Required
