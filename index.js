@@ -1,5 +1,5 @@
 const core = require('@actions/core');
-const { STS } = require('aws-sdk');
+const { STSClient, AssumeRoleCommand } = require('@aws-sdk/client-sts');
 
 const assumeRole = async () => {
   try {
@@ -11,17 +11,17 @@ const assumeRole = async () => {
     const role_session_name = core.getInput('role-session-name');
 
     // Create STS client
-    const sts = new STS({
+    const sts = new STSClient({
       accessKeyId:     access_key_id,
       secretAccessKey: secret_access_key,
     });
 
     // Assume role with STS
-    const res = await sts.assumeRole({
+    const res = await sts.send(new AssumeRoleCommand({
       RoleArn:         role_arn,
       RoleSessionName: role_session_name,
       DurationSeconds: duration_seconds,
-    }).promise()
+    }))
 
     // Export ENV
     core.setSecret(res.Credentials.AccessKeyId);
