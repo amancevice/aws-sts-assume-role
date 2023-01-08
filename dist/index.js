@@ -18520,12 +18520,11 @@ const assumeRole = async () => {
     const duration_seconds  = core.getInput('duration-seconds');
     const role_arn          = core.getInput('role-arn');
     const role_session_name = core.getInput('role-session-name');
+    const region            = core.getInput('region') || process.env.AWS_REGION || process.env.AWS_DEFAULT_REGION || 'us-east-1';
+    const credentials       = { accessKeyId: access_key_id, secretAccessKey: secret_access_key }
 
     // Create STS client
-    const sts = new STSClient({
-      accessKeyId:     access_key_id,
-      secretAccessKey: secret_access_key,
-    });
+    const sts = new STSClient({ credentials: credentials, region: region });
 
     // Assume role with STS
     const res = await sts.send(new AssumeRoleCommand({
@@ -18543,7 +18542,6 @@ const assumeRole = async () => {
     core.exportVariable('AWS_SESSION_TOKEN',     res.Credentials.SessionToken);
   } catch (error) {
     core.error(error);
-    throw new Error(error);
   }
 }
 

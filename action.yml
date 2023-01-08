@@ -8,6 +8,10 @@ inputs:
   secret-access-key:
     description: AWS secret access key
     required: true
+  region:
+    description: AWS region name
+    default: null
+    required: false
   duration-seconds:
     description: The duration, in seconds, of the role session
     default: 3600

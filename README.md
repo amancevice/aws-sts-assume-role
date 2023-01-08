@@ -16,7 +16,8 @@ Assume an AWS IAM role and export the credentials to your GitHub Action ENV.
     role-arn:          ${{ secrets.AWS_ROLE_ARN }}
 
     # Optional
-    role-session-name: "GitHub-Action"
+    region:            us-west-2
+    role-session-name: GitHub-Action
     duration-seconds:  3600
 ```
 
